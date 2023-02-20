@@ -1,0 +1,731 @@
+$black: #000000
+$light-black: #1e1e1e
+$white: #ececec
+$gray: #DEDEDE
+$deep-gray: #878787
+$blue: #6377DB
+$deep-blue: #3148BC
+$light-blue: #899AF2
+$orange: #F1962A
+$yellow: #F4BE6C
+
+// $grid-breakpoints:
+//     xs: 0,
+//     sm: 576px
+//     md: 768px
+//     lg: 992px
+//     xl: 1200px
+//     xxl: 1620px
+
+
+@mixin bg-blend($color,$mode, $url)
+    background-color: $color
+    background-blend-mode: $mode
+    background-image: $url
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+
+
+*
+    color: $light-black
+    box-sizing: border-box
+html
+    background-color: $gray
+img
+    object-fit: cover
+
+// 導覽列------------------------------------------------------
+.top_nav
+    margin-top: 4rem
+    position: fixed
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    mix-blend-mode: difference
+    z-index: 100
+    ul
+        justify-content: space-between
+        li
+            &:last-child
+                text-align: right
+            a
+                color: $white
+                font-size: 2.4rem
+                span
+                    cursor: pointer
+                    color: $white
+                    font-size: 4rem
+
+.menu
+    &-guide
+        width: 100vw
+        height: 100vh
+        background-color: $light-black
+        // display: none
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 200
+    &-bg
+        min-width: 40rem
+        width: 25%
+        // max-width: 40%
+        height: 100vh
+        background-image: url(../img/k10.png)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        box-shadow: -4rem 0 3rem 2rem rgba(30,30,30,1) inset
+        // box-shadow: 3px 3px red, -1em 0 0.4em olive
+        position: absolute
+        left: 0
+        @media (max-width: 72rem)
+            width: 100%
+            max-width: 100%
+    &-container
+        padding: 7rem 4rem
+        position: absolute
+        top: 40%
+        left: 50%
+        transform: translate(-50%, -50%)
+    &-close
+        position: absolute
+        top: 2rem
+        right: 2rem
+        span
+            color: $gray
+            font-size: 4.7rem
+    &-items
+        margin: 0 auto
+        min-width: 35rem
+        max-width: 80%
+        padding: 4rem 0 2rem
+        border-bottom: 1px solid $deep-gray
+        a
+            h3
+                color: $white
+                display: inline-block
+            p
+                margin-left: 2.4rem
+                color: $gray
+                text-transform: capitalize
+                display: inline-block
+
+
+
+// 首頁樣式------------------------------------------------------
+.index
+    &-banner
+        width: 100vw
+        height: 100vh
+        overflow: hidden
+        position: relative
+        &-bg
+            height: 100%
+            overflow-y: scroll
+            &::-webkit-scrollbar
+                display: none
+            img
+                width: 100%
+                background: linear-gradient(#fff 0%,$light-black 100%)
+        &-content
+            color: $light-black
+            display: grid
+            grid-row-gap: 3rem
+            position: absolute
+            top: 47%
+            left: 50%
+            transform: translate(-50%, -50%)
+            
+            h4
+                margin-top: .5rem
+                text-align: center
+        &-block_fade
+            width: 100vw
+            height: 80vh
+            background-color: $light-black
+    &-profile
+        padding-top: 20vh
+        width: 100%
+        min-height: 100vh
+        background: linear-gradient(180deg, $light-black 0%, #060E30 100%)
+        position: relative
+        // 設定照片浮出
+        &-container
+
+        &-headshot
+            position: relative
+            img
+                &:first-child
+                    box-shadow: 1.2rem 1.2rem .4rem .3rem  rgba(255,255,255,.4)
+        &-content
+            padding: 3rem
+            display: grid
+            grid-template-rows: 1fr 9fr
+            grid-row-gap: 5rem
+            h2, h5
+                color: $white
+
+    &-info
+        &-intro
+            width: 100vw
+            height: 100vh
+            background-image: url("../img/kai_night.png")
+            background-position: top right
+            background-repeat: no-repeat
+            background-size: cover
+            &-content
+                margin-top: 15%
+                h5
+                    line-height: 4.2rem
+                    letter-spacing: .4rem
+                    span
+                        color: $white
+                        display: block
+
+    &-photo_wall
+        padding: 12rem 0 7rem
+        width: 100vw
+        min-height: 50rem
+        max-height: 
+        background: radial-gradient(19.69% 17.89% at 50% 14.64%, rgba(30, 30, 30, 0.9) 0%, #1E1E1E 100%);
+        
+        &-title
+            text-align: center
+            display: grid
+            grid-row-gap: .7rem
+            h3
+                color: $white
+            p  
+                color: $deep-gray
+        &-photos
+            width: 100vw
+            padding: 6rem 2rem 0
+            .content
+                columns: 4
+                column-gap: 2rem
+                @media (max-width: 120rem) 
+                    columns: 3
+                @media (max-width: 99.2rem) 
+                    columns: 2
+                    
+  
+                img
+                    margin-bottom: 2rem
+                    width: 100%
+                    border-radius: .5rem
+                    display: inline-block
+                    filter: grayscale(100%)
+                    transition: filter ease-in .3s
+                    @media (max-width: 99.2rem) 
+                        filter: grayscale(0%)
+                    &:hover
+                        filter: grayscale(0%)
+                // flex
+                // min-height: 108rem
+                // max-height: 120rem
+                // display: flex
+                // flex-direction: column
+                // flex-wrap: wrap
+                // justify-content: center
+                // align-items: start
+                // overflow-x: scroll
+                // &::-webkit-scrollbar
+                //     display: none
+                // img
+                //     // flex: 0 0 80%
+                //     margin: 1rem
+                //     min-width: 25rem
+                //     max-width: 20%
+                //     height: 50rem
+                //     // height: 100%
+
+
+    // 職涯與生活
+    &-Jobs_Life
+        min-height: 100vh
+        background-color: $orange
+        position: relative
+        h3
+            color: $white
+        &-jobs,&-life
+            min-height: 100vh
+            position: relative
+            background-repeat: no-repeat
+            background-size: cover
+            background-color: rgba(0,0,0,0)
+            background-blend-mode: darken
+            transition: .3s ease-in background-color
+            &:hover
+                background-color: rgba(0,0,0,.4)
+                .index-Jobs_Life-content
+                    top: 50%
+                    opacity: 1
+            // 遮罩
+            // &:before
+            //     content: ""
+            //     width: 100%
+            //     height: 100%
+            //     background-color: #000
+            //     opacity: .4
+            //     position: absolute
+            //     top: 0
+            //     left: 0
+            h3
+                position: absolute
+                top: 6rem
+        &-content
+            padding: 10rem
+            min-width: 47rem
+            min-height: 35rem
+            text-align: center
+            display: inline-block
+            position: absolute
+            top: 45%
+            left: 50%
+            opacity: 0
+            transform: translate(-50%,-50%)
+            transition: all ease-out .8s
+            .content-top p,.content-bottom p
+                color: $gray
+                display: block
+            span
+                margin: 2rem 0
+                padding: .8rem 3rem
+                color: $white
+                
+                border: 4px solid $white
+                border-radius: .5rem
+                display: inline-block
+
+
+        &-jobs
+            background-image: url(../img/peaky_blinder.jpeg)
+            background-position: top right
+            h3
+                left: 6rem      
+        &-life
+            background-image: url(../img/controller.jpg)
+            background-position: center right
+            h3
+                right: 6rem
+
+    // 社群平台
+    &-Social_Media
+        padding: 25rem 0
+        width: 100vw
+        // height: 100vh
+        background-color: $deep-gray
+        &-container
+            background-color: $light-black
+        &-card
+            min-height: 70rem
+            &:hover
+                img
+                    filter: grayscale(0%)
+                h3
+                    color: $blue
+                h5
+                    color: $white
+                p
+                    color: $light-blue
+            &-headshot
+                img
+                    height: 100%
+                    filter: grayscale(100%)
+                    transition: filter ease-out .8s
+            &-info
+                padding: 5rem
+                display: grid
+                grid-template-rows: 5rem 5rem 1fr 5rem
+                grid-row-gap: 4rem
+                // align-items: center
+                h3, p, h5
+                    transition: all ease-out .8s
+                    color: $deep-gray
+                h3
+                    justify-self: end
+                h5
+                    justify-self: end
+                .social_list
+                    a
+                        margin-right: 4rem
+                        position: relative
+                        img
+                            width: 4rem
+                            height: 4rem
+                            color: $orange
+                            transition: all ease-out .3s
+                            &:last-child
+                                display: none
+                                opacity: 0
+                        &:hover
+                            img
+                                &:first-child
+                                    display: none
+                                    opacity: 0
+                                &:last-child
+                                    display: inline
+                                    opacity: 1
+
+.footer
+    padding: 15rem 0
+    width: 100vw
+    min-height: 65rem
+    background-image: url(../img/city_night.png)
+    background-position: center
+    background-size: cover
+    position: relative
+    z-index: 1
+    &:before
+        content: ""
+        width: 100vw
+        min-height: inherit
+        position: absolute
+        top: 0
+        left: 0
+        background-color: $black
+        opacity: .4
+        z-index: 2
+
+    h1, h5
+        color: $white
+    h1
+        font-size: 7.2rem
+        z-index: 10
+        span
+            display: block
+            color: $white
+    a
+        color: $deep-gray
+        transition: color ease-out .3s
+        &:hover
+            color: $gray
+    .row
+    &-content
+        z-index: 10
+        margin-right: 3rem
+        a
+            font-size: 2rem
+            margin-right: 3rem
+            &:last-child
+                margin-right: 0
+        h5
+            margin-bottom: 2rem
+        &-link
+        justify-content: 
+        &-social_media
+            margin-top: 4rem
+            a
+                img
+                    width: 4rem
+                    height: 4rem
+            
+
+// 職涯Jobs
+.business
+    &-banner
+        padding: 20rem 2rem
+        width: 100vw
+        height: 100vh
+        background-image: url("../img/kai_night.png")
+        background-position: top right
+        background-repeat: no-repeat
+        background-size: cover
+        &-info
+            &-title
+                display: grid
+                grid-template-columns: 30rem 1fr
+                grid-column-gap: 2rem
+                h1
+                    color: $white
+                    font-size: 7.2rem
+                    position: relative
+                    // &:after
+                    //     content: ""
+                    //     margin-left: 2rem
+                    //     min-width: 40%
+                    //     background-color: #fff
+                    //     border-bottom: 4px solid $white
+                    //     display: inline-block
+                    //     position: absolute
+                    //     bottom: 1rem
+                .decoration
+                    margin-bottom: 1rem
+                    width: 50%
+                    border-bottom: 3px solid $white
+            &-content
+                margin-top: 10rem
+                p
+                    color: $gray
+    
+    &-goal
+        width: 100vw
+        min-height: 70vh
+        position: relative
+        background: radial-gradient(farthest-side at -30% -30%, rgba(30, 30, 30, 0.7) 0%, #1E1E1E 100%)
+        // position: absolute
+        // top: 0
+        // left: 0
+        // &-container
+        //     height: 100%
+        .container-xxl
+            height: 100rem
+        .row
+            padding: 14rem 0 5rem
+            // height: 100vh
+
+        &-info
+            padding: 0 2rem
+            display: grid
+            grid-template-rows: 7rem 1fr
+            grid-row-gap: 7rem
+            &-title
+                color: $white
+                align-self: center
+                position: relative
+                &:after
+                    content: ""
+                    min-width: 27%
+                    background-color: #fff
+                    border-bottom: 4px solid $gray
+                    display: inline-block
+                    position: absolute
+                    left: 0
+                    bottom: -1rem
+            &-content
+                p
+                    color: $gray
+        &-photo
+            justify-self: center
+            img
+                width: 100%
+                height: 100%
+                max-height: 70rem
+                border-radius: .5rem
+                
+
+    &-jobs
+        padding: 14rem 0 15rem
+        width: 100vw
+        min-height: 80vh
+        background-color: $light-black
+        // background-color: $orange
+        &-cate
+            position: relative
+            &-photo
+                img
+                    border-radius: 1rem
+            &-content
+                padding: 3rem 3rem 4rem
+                min-height: 20rem
+                background: $gray
+                border-radius: 1rem
+                position: absolute
+                right: 0
+                bottom: -10rem
+                background: rgba(222, 222, 222, 0.75)
+                backdrop-filter: blur(3.5px)
+                p
+                    margin-top: 3rem
+    &-skills
+        padding: 14rem 0 7rem
+        width: 100vw
+        min-height: 50rem
+        background-color: #fff
+        &-items
+            padding: 4rem 2rem
+            text-align: center
+            &-title
+                img
+                    margin-bottom: 3rem
+            &-content
+                margin-top: 3rem
+                line-height: 3.2rem
+
+
+    
+    &-profolios
+        padding: 14rem 0 7rem
+        min-height: 108rem
+        // border: 3px solid $blue
+        &-title
+            display: grid
+            grid-template-columns: 1fr auto 1fr
+            // grid-column-gap: 3rem
+            align-items: center
+            justify-items: center
+            h3
+                // padding: 0 3rem
+                text-align: center
+                // &:after, &:before
+                //     content: ""
+                //     width: 30%
+                //     border-bottom: 3px solid $light-black
+                //     display: inline-block
+            .decoration
+                    // padding: 0 5rem
+                    max-width: 92%
+                    border-bottom: 2px solid $light-black
+                    // position: relative
+
+        &-options
+            height: 14rem
+            // border: 1px solid $blue
+            a
+                display: block
+                // font-size: 3rem
+
+        &-items
+            &-photo
+                img
+                    width: 100%
+                    max-height: 60rem
+
+            &-content
+                display: grid
+                grid-template-rows: 4rem 1fr
+                align-items: start
+                grid-row-gap: 2.4rem
+                h5
+
+// 生活點滴life
+.life
+    &-banner
+        height: 55rem
+        background-image: url(../img/island.jpg)
+        background-position: center right
+        background-size: cover
+        background-color: rgba(103,103,103,.75)
+        background-blend-mode: darken
+        position: relative
+        &-container
+            height: 100%
+            position: relative
+        &-content
+            padding: 0 3rem
+            width: 100%
+            position: absolute
+            right: 0
+            bottom: 2rem
+            text-align: right
+            h3
+                color: $white
+            h5
+                margin-top: 1.6rem
+                color: $gray
+        &-title
+            display: grid
+            grid-template-columns: 1fr 30rem
+            grid-column-gap: 2rem
+            justify-items: end
+            .decoration
+                margin-bottom: 1rem
+                width: 50%
+                border-bottom: 3px solid $white
+
+    &-article
+        margin-top: 14rem
+        justify-content: center
+        &-nav
+            height: 6rem
+            position: sticky
+            top: 3rem
+            mix-blend-mode: difference
+            z-index: 10
+            // @media (max-width: 54rem) 
+            //     top: 7rem
+            //     background-color: $black
+            a
+                color: $white
+                font-size: 2rem
+                font-weight: 300
+        &-list
+
+        &-items
+            padding-bottom: 4rem
+            margin-bottom: 8rem
+            border-bottom: 1px solid $gray
+            position: relative
+
+            // 文章隔線 要做出來
+            // &:before
+            //     content: ""
+                // width: 10rem
+                // height: 10rem
+                // border-bottom: 1px solid $black
+                // position: relative
+                // top: 0
+                // left: 0
+            &:last-child
+                border: 0
+            
+
+        &-thumbnail
+            height: 40rem
+            border-radius: .7rem
+            background-size: cover
+            background-image: url(../img/business_man.jpg)
+            // background: linear-gradient(180deg, rgba(0, 0, 0, 0) 75%, #1E1E1E 100%)
+            background-position: center
+            position: relative
+            &:before
+                content: ""
+                width: 100%
+                height: 40rem
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 70%, #1E1E1E 100%)
+                position: absolute
+                top: 0
+                left: 0
+        &-title, &-date
+            position: absolute
+            bottom: 3rem
+        &-title
+            left: 3rem
+            h3
+                margin-bottom: 1.2rem
+                color: $white
+            h5
+                color: $gray
+        &-date
+            right: 3rem
+            color: $gray
+        &-content
+            padding: 2rem
+
+    &-aside
+        &-cate
+            &:last-child
+                margin-top: 3rem
+            &-list
+                padding-left: 2.4rem
+            &-items
+                margin-top: 1rem
+                font-size: 2rem
+                a
+                    color: $deep-gray
+                    transition: color ease .5s
+                    &:hover
+                        color: $light-black
+
+
+    // 文章Article
+    &-article_display
+        margin-bottom: 10rem
+        img
+            width: 100%
+            border-radius: .7rem
+        &-header
+            position: relative
+            &-title
+                margin: 7rem 0 3rem
+                h5
+                    margin-top: 1.4rem
+            &-date
+                position: absolute
+                right: 0
+                bottom: 0
+        &-content
+            // margin-top: 7rem

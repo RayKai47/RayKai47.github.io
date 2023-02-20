@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;1,400&family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+    <!-- google icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- jQuery-->
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <!-- my data -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>KÄÏ's Wonderland</title>
+</head>
+<body>
+    <div class="body">
+        <nav class="top_nav container-xxl">
+            <ul class="row">
+                <li class="col"><a href="index.html">KÄÏ</a></li>
+                <li class="col"><a class="menu-open"><span class="material-symbols-rounded">sort</span></a></li>
+            </ul>
+        </nav>
+        <div class="menu-guide">
+            <div class="menu-bg"></div>
+            <div class="menu-container container-xxl">
+                <a class="menu-close" href="#"><span class="material-symbols-rounded">close</span></a>
+                <div class="row menu-items">
+                    <a href="index.html">
+                        <h3 class="k_h3">首頁</h3>
+                        <p>home</p>
+                    </a>
+                </div>
+                <div class="row menu-items">
+                    <a href="business.html">
+                        <h3 class="k_h3">職人職能</h3>
+                        <p>business ability</p>
+                    </a>
+                </div>
+                <div class="row menu-items">
+                    <a href="#">
+                        <h3 class="k_h3">作品集</h3>
+                        <p>Profolios</p>
+                    </a>
+                </div>
+                <div class="row menu-items">
+                    <a href="life.html">
+                        <h3 class="k_h3">生活點滴</h3>
+                        <p>Vlog</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $(".menu-open").click(function(){
+                    $(".menu-guide").fadeIn(400);
+                    // .css("display","block");
+                })
+                $(".menu-close").click(function(){
+                    $(".menu-guide").fadeOut(400);
+                })
+            })
+        </script>
+
+        <!-- 首頁內容 -->
+        <div class="index-banner">
+            <div class="index-banner-bg">
+                <img src="img/ink.png">
+                <div class="index-banner-block_fade"></div>
+            </div>
+            <div class="index-banner-content">
+                <h1 class="k_h1">這裡，是KÄÏ的世界</h1>
+                <h4 class="k_h4">希望你好好的，享受沈靜在這裡.</h4>
+            </div>
+        </div>
+
+        <div class="index-profile">
+            <div class="index-profile-container container-xxl">
+                <div class="row justify-content-between align-items-center">
+                    <div class="index-profile-headshot col-md-5">
+                        <img id="headshot-1" src="img/kai_suit.jpg">
+                        <!-- <img id="headshot-2" src="img/kai_suit.jpg"> -->
+                    </div>
+                    <div class="index-profile-content col-md-6">
+                        <h2 class="k_h2">凱 KÄÏ</h2>
+                        <h5 class="k_h5">在大學時期後半，意識到自己需要具備一項專長，才能夠在社會上有自己的一席之地，在外開始接觸學習平面設計、網頁設計。
+        嘗試用自己的美觀去架設網站，創造符合客戶形象的官方網站，在現今大數據情況下，深知這是現今最需要的技術，所以以此鑽研發展，希望找到自己的一片天。
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 進入info -->
+        <div class="index-info">
+            <div class="index-info-intro">
+                <div class="container-xxl">
+                    <div class="row">
+                        <div class="col-md-6 index-info-intro-content p-5">
+                            <h5 class="k_h5">
+                                <span>接觸到設計與音樂，我發現自己的熱情湧現</span>
+                                <span>我想要不被拘束的，往藝術家前進</span>
+                                <br>
+                                <span>這社會有這麼多美的事物</span>
+                                <span>我想要用自己的手法與觀點去創造不同的事物</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- 照片牆Photo Wall -->
+        <div class="index-photo_wall">
+            <div class="index-photo_wall-title">
+                    <h3 class="k_h4">我的相片牆</h3>
+                    <p>我走過的點滴 在這裡</p>
+            </div>
+            <div class="index-photo_wall-photos">
+                <div class="content">
+                    <img class="" src="img/k1.jpg">
+                    <img class="" src="img/k2.jpg">
+                    <img class="" src="img/k3.jpg">
+                    <img class="" src="img/k4.jpg">
+                    <img class="" src="img/k5.jpg">
+                    <img class="" src="img/k6.jpg">
+                    <img class="" src="img/k8.jpg">
+                    <img class="" src="img/k7.jpg">
+                    <img class="" src="img/k9.jpg">
+                    <img class="" src="img/k10.png">
+                    <img class="" src="img/k11.jpg">
+                    <img class="" src="img/k12.jpg">
+                    <img class="" src="img/k13.jpg">
+                    <img class="" src="img/k14.jpg">
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- 職涯發展Jobs / 生活點滴Life -->
+        <div class="index-Jobs_Life container-fluid">
+            <div class="row no-gutters">
+                <div class="index-Jobs_Life-jobs col-lg-6">
+                    <h3 class="k_h1">職涯發展</h3>
+                    <a href="business.html" class="index-Jobs_Life-jobs-info index-Jobs_Life-content k_h4">
+                        <div class="content-top">
+                            <p class="k_h5">看看凱KÄÏ的職涯發展</p> 
+                            <p class="k_h5">目前的工作有哪些</p> 
+                            <p class="k_h5">包含一小部分的心路歷程</p> 
+                        </div>
+                        <span class="k_h4">進入</span>
+                        <div class="content-bottom">
+                            <p class="k_h5">目前可能還不夠豐富</p>
+                            <p class="k_h5">但你可以跟我一起見證</p>
+                            <p class="k_h5">我努力的點點滴滴</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="index-Jobs_Life-life col-lg-6">
+                    <h3 class="k_h1">生活點滴</h3>
+                        <a href="life.html" class="index-Jobs_Life-jobs-info index-Jobs_Life-content k_h4">
+                            <div class="content-top">
+                                <p class="k_h5">這裡是KÄÏ's Vlog</p> 
+                                <p class="k_h5">可以看到一些</p> 
+                                <p class="k_h5">隨手記錄的生活點滴</p> 
+                            </div>
+                            <span class="k_h4">進入</span>
+                            <div class="content-bottom">
+                                <p class="k_h5">雖然外表看起來有點高冷</p>
+                                <p class="k_h5">但其實是一個慢熟</p>
+                                <p class="k_h5">又兼具溫暖的人</p>
+                            </div>
+                        </a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- 其他平台 Social_Media -->
+        <div class="index-Social_Media">
+            <div class="index-Social_Media-container container-xxl">
+                <div class="index-Social_Media-card row">
+                    <div class="index-Social_Media-card-headshot col-md-5 p-0">
+                        <img src="img/k_headshot.JPG">
+                    </div>
+
+                    <div class="index-Social_Media-card-info col-md-7">
+                        <h3 class="k_h3">社群軟體</h3>
+                        <div class="social_list">
+                            <a href="https://www.facebook.com/profile.php?id=100055493317056"><img src="img/icon_facebook_gray.svg"><img src="img/icon_facebook.svg"></a>
+                            <a href="https://www.instagram.com/sidewalker___/"><img src="img/icon_instagram_gray.svg"><img src="img/icon_instagram.svg"></a>
+                            <a href="#"><img src="img/icon_youtube_gray.svg"><img src="img/icon_youtube.svg"></a>
+                            <a href="#"><img src="img/icon_twitter_gray.svg"><img src="img/icon_twitter.svg"></a>
+                        </div>
+                        <p>設計師的日常生活紀錄，可能平淡無氣，但總想給你最特別的感受</p>
+                        <h5 class="k_h5">Try the best to be the one you want to be. - KÄÏ</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <footer class="footer">
+            <div class="footer-container container-xxl">
+                <div class="row align-items-center">
+                    <h1 class="col-md-4">KÄÏ's <span>Ｗonderland</span></h1>
+                    <div class="footer-content col-7 col-md-5 offset-1">
+                        <div class="footer-content-link">
+                            <h5 class="k_h4">其他介紹</h5>
+                            <a href="#">個人簡介</a>
+                            <a href="#">生涯發展</a>
+                            <a href="#">生活點滴</a>
+                        </div>
+                        <div class="footer-content-social_media">
+                            <h5 class="k_h4">社群平台</h5>
+                            <a href="https://www.facebook.com/profile.php?id=100055493317056"><img src="img/icon_facebook_rect.svg"></a>
+                            <a href="https://www.instagram.com/sidewalker___/"><img src="img/icon_instagram_rect.svg"></a>
+                            <a href="#"><img src="img/icon_twitter_rect.svg"></a>
+                            <a href="#"><img src="img/icon_youtube_rect.svg"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
