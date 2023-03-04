@@ -1,30 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- font link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;1,400&family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
-    <!-- google icon -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <!-- my data -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
-    <title>KÄÏ's Wonderland</title>
-</head>
-<body>
-    <div class="body">
-        <nav class="top_nav container-xxl">
-            <ul class="row">
-                <li class="col"><a href="index.html">KÄÏ</a></li>
-                <li class="col"><a href="#"><span class="material-symbols-rounded">sort</span></a></li>
-            </ul>
-        </nav>
+<?php include("shareHeader.php"); ?>
 
 
 
@@ -59,7 +33,7 @@
                                 <h2 class="k_h2">台中遊記</h2>
                                 <h5 class="k_h5">台中真的好多地方好好玩呀！</h5>
                             </div>
-                            <p class="life-article_display-header-date italic">2021/05/20</p>
+                            <p class="life-article_display-header-date italic m-0">2021/05/20</p>
                         </div>
                         
                         <p class="life-article_display-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. A deleniti dignissimos accusantium deserunt doloremque. Sunt odit, provident distinctio quia velit ut excepturi illum labore deleniti soluta, omnis atque pariatur a!
@@ -70,55 +44,10 @@
                     </div>
 
 
-                    <div class="life-aside col-lg-3 offset-lg-1 col">
-                        <ul class="life-aside-cate">
-                            <li class="life-aside-cate-title k_h4">熱門文章</li>
-                            <ul class="life-aside-cate-list">
-                                <li class="life-aside-cate-items k_h5"><a href="#">Title-Title-Title</a></li>
-                                <li class="life-aside-cate-items k_h5"><a href="#">Title-Title-Title</a></li>
-                                <li class="life-aside-cate-items k_h5"><a href="#">Title-Title-Title</a></li>
-                            </ul>
-                        </ul>
-                        </ul>
-                        <ul class="life-aside-cate">
-                            <li class="life-aside-cate-title k_h4">最新文章</li>
-                            <ul class="life-aside-cate-list">
-                                <li class="life-aside-cate-items k_h5"><a href="#">Title-Title-Title</a></li>
-                                <li class="life-aside-cate-items k_h5"><a href="#">Title-Title-Title</a></li>
-                                <li class="life-aside-cate-items k_h5"><a href="#">Title-Title-Title</a></li>
-                            </ul>
-                        </ul>
-                    </div>
+                    <?php include("shareLife_aside.php"); ?>
                 </div>
             </div>
         </div>
 
 
-        <footer class="footer">
-            <div class="footer-container container-xxl">
-                <div class="row align-items-center">
-                    <h1 class="col-md-4">KÄÏ's <span>Ｗonderland</span></h1>
-                    <div class="footer-content col-7 col-md-5 offset-1">
-                        <div class="footer-content-link">
-                            <h5 class="k_h4">其他介紹</h5>
-                            <a href="#">個人簡介</a>
-                            <a href="#">生涯發展</a>
-                            <a href="#">生活點滴</a>
-                        </div>
-                        <div class="footer-content-social_media">
-                            <h5 class="k_h4">社群平台</h5>
-                            <a href="https://www.facebook.com/profile.php?id=100055493317056"><img src="img/icon_facebook_rect.svg"></a>
-                            <a href="https://www.instagram.com/sidewalker___/"><img src="img/icon_instagram_rect.svg"></a>
-                            <a href="#"><img src="img/icon_twitter_rect.svg"></a>
-                            <a href="#"><img src="img/icon_youtube_rect.svg"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-
-    </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-</body>
-</html>
+<?php include("shareFooter.php"); ?>

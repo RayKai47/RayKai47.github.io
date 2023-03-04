@@ -1,73 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- font link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;1,400&family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
-    <!-- google icon -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <!-- jQuery-->
-    <script src="js/jquery-3.6.1.min.js"></script>
-    <!-- my data -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
-    <title>KÄÏ's Wonderland</title>
-</head>
-<body>
-    <div class="body">
-        <nav class="top_nav container-xxl">
-            <ul class="row">
-                <li class="col"><a href="index.html">KÄÏ</a></li>
-                <li class="col"><a class="menu-open"><span class="material-symbols-rounded">sort</span></a></li>
-            </ul>
-        </nav>
-        <div class="menu-guide">
-            <div class="menu-bg"></div>
-            <div class="menu-container container-xxl">
-                <a class="menu-close" href="#"><span class="material-symbols-rounded">close</span></a>
-                <div class="row menu-items">
-                    <a href="index.html">
-                        <h3 class="k_h3">首頁</h3>
-                        <p>home</p>
-                    </a>
-                </div>
-                <div class="row menu-items">
-                    <a href="business.html">
-                        <h3 class="k_h3">職人職能</h3>
-                        <p>business ability</p>
-                    </a>
-                </div>
-                <div class="row menu-items">
-                    <a href="#">
-                        <h3 class="k_h3">作品集</h3>
-                        <p>Profolios</p>
-                    </a>
-                </div>
-                <div class="row menu-items">
-                    <a href="life.html">
-                        <h3 class="k_h3">生活點滴</h3>
-                        <p>Vlog</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <script>
-            $(document).ready(function(){
-                $(".menu-open").click(function(){
-                    $(".menu-guide").fadeIn(400);
-                    // .css("display","block");
-                })
-                $(".menu-close").click(function(){
-                    $(".menu-guide").fadeOut(400);
-                })
-            })
-        </script>
+<?php include("shareHeader.php"); ?>
 
         <!-- 首頁內容 -->
         <div class="index-banner">
@@ -141,6 +72,7 @@
                     <img class="" src="img/k12.jpg">
                     <img class="" src="img/k13.jpg">
                     <img class="" src="img/k14.jpg">
+                    <img class="" src="img/k_15.JPG">
                 </div>
             </div>
         </div>
@@ -152,7 +84,7 @@
             <div class="row no-gutters">
                 <div class="index-Jobs_Life-jobs col-lg-6">
                     <h3 class="k_h1">職涯發展</h3>
-                    <a href="business.html" class="index-Jobs_Life-jobs-info index-Jobs_Life-content k_h4">
+                    <a href="business.php" class="index-Jobs_Life-content k_h4">
                         <div class="content-top">
                             <p class="k_h5">看看凱KÄÏ的職涯發展</p> 
                             <p class="k_h5">目前的工作有哪些</p> 
@@ -169,7 +101,7 @@
 
                 <div class="index-Jobs_Life-life col-lg-6">
                     <h3 class="k_h1">生活點滴</h3>
-                        <a href="life.html" class="index-Jobs_Life-jobs-info index-Jobs_Life-content k_h4">
+                        <a href="life.php" class="index-Jobs_Life-jobs-info index-Jobs_Life-content k_h4">
                             <div class="content-top">
                                 <p class="k_h5">這裡是KÄÏ's Vlog</p> 
                                 <p class="k_h5">可以看到一些</p> 
@@ -213,31 +145,4 @@
 
 
 
-        <footer class="footer">
-            <div class="footer-container container-xxl">
-                <div class="row align-items-center">
-                    <h1 class="col-md-4">KÄÏ's <span>Ｗonderland</span></h1>
-                    <div class="footer-content col-7 col-md-5 offset-1">
-                        <div class="footer-content-link">
-                            <h5 class="k_h4">其他介紹</h5>
-                            <a href="#">個人簡介</a>
-                            <a href="#">生涯發展</a>
-                            <a href="#">生活點滴</a>
-                        </div>
-                        <div class="footer-content-social_media">
-                            <h5 class="k_h4">社群平台</h5>
-                            <a href="https://www.facebook.com/profile.php?id=100055493317056"><img src="img/icon_facebook_rect.svg"></a>
-                            <a href="https://www.instagram.com/sidewalker___/"><img src="img/icon_instagram_rect.svg"></a>
-                            <a href="#"><img src="img/icon_twitter_rect.svg"></a>
-                            <a href="#"><img src="img/icon_youtube_rect.svg"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-
-    </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-</body>
-</html>
+<?php include("shareFooter.php"); ?>

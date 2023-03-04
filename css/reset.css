@@ -88,9 +88,7 @@ meter {
     
 /* My custom setting */
 html{
-    font-size: 10px;
-    /* font-family:  */
-}
+    font-size: 10px;}
 
 .k_h1{
     font-family: 'Noto Serif', serif;
@@ -132,4 +130,8 @@ a{
     color: #000;
     font-size: 18px;
     text-decoration: none;
+}
+
+.en_font{
+    font-family: 'Playfair Display', serif;
 }
